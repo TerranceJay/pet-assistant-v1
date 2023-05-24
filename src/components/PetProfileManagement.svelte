@@ -1,6 +1,6 @@
 <script>
-  import { getPetProfiles, deletePetProfile } from '../path/to/petProfileService'; // Adjust the path to match your project structure
-
+  
+  import { getPetProfiles, deletePetProfile } from './petProfileService';
   let petProfiles = [];
 
   async function fetchPetProfiles() {
@@ -26,6 +26,7 @@
   // Fetch pet profiles when the component is mounted
   onMount(fetchPetProfiles);
 </script>
+
 
 <h1>Pet Profile Management</h1>
 

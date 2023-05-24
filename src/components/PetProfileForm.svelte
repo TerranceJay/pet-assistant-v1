@@ -1,5 +1,5 @@
 <script>
-  import { createPetProfile } from '../firebase'; // Assuming you have the necessary Firebase service methods in a file named firebase.js
+  import { createPetProfile } from './components/firebase.js'; // Assuming you have the necessary Firebase service methods in a file named firebase.js
 
   let name = '';
   let breed = '';
