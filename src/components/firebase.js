@@ -12,6 +12,9 @@ const firebaseConfig = {
   measurementId: "G-H04RLEJNG5"
 };
 
+// Get a reference to the Firestore database
+const db = firebase.firestore();
+
 // petProfileService.js
 
 // Function to create a new pet profile

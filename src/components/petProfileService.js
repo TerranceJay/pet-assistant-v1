@@ -1,15 +1,6 @@
 import { db } from './firebase'; // Adjust the path to match your project structure
 
 
-async function createPetProfile(petProfileData) {
-  try {
-    // Create a new document in the 'petProfiles' collection
-    await db.collection('petProfiles').add(petProfileData);
-  } catch (error) {
-    throw new Error('Failed to create pet profile: ' + error.message);
-  }
-}
-
 // Function to save a new pet profile
 async function createPetProfile(petProfileData) {
   try {
@@ -57,5 +48,3 @@ async function deletePetProfile(petProfileId) {
 }
 
 export { createPetProfile, updatePetProfile, getPetProfiles, deletePetProfile };
-
-export { createPetProfile };

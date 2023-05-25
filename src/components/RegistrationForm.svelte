@@ -1,5 +1,5 @@
 <script>
-  import { auth } from '../firebase'; // Assuming you have the Firebase initialization in a file named firebase.js
+  import { auth } from './firebase'; // Assuming you have the Firebase initialization in a file named firebase.js
 
   let email = '';
   let password = '';
@@ -14,6 +14,8 @@
       console.error('Registration error:', error);
     }
   }
+
+  export { email, password };
 </script>
 
 <form on:submit|preventDefault={register}>

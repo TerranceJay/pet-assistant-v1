@@ -1,12 +1,14 @@
 <script>
-  import { createPetProfile } from './components/firebase.js'; // Assuming you have the necessary Firebase service methods in a file named firebase.js
+  import { createPetProfile } from './firebase.js'; // Assuming you have the necessary Firebase service methods in a file named firebase.js
+
+ // export let petProfile;
 
   let name = '';
   let breed = '';
   let age = '';
   let medicalHistory = '';
 
-  async function savePetProfile() {
+  export async function onSave() {
     try {
       // Call the Firebase service method to save the pet profile
       await createPetProfile({ name, breed, age, medicalHistory });
@@ -20,28 +22,6 @@
   }
 </script>
 
-<form on:submit|preventDefault={savePetProfile}>
-  <label>
-    Pet Name:
-    <input type="text" bind:value={name} required />
-  </label>
-
-  <label>
-    Breed:
-    <input type="text" bind:value={breed} required />
-  </label>
-
-  <label>
-    Age:
-    <input type="text" bind:value={age} required />
-  </label>
-
-  <label>
-    Medical History:
-    <textarea bind:value={medicalHistory}></textarea>
-  </label>
-
-  <button type="submit">Save</button>
+<form on:submit|preventDefault={onSave}>
+  <!-- ... form inputs ... -->
 </form>
-
-import { createPetProfile } from '../path/to/petProfileService'; // Adjust the path to match your project structure

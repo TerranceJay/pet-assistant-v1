@@ -1,8 +1,8 @@
  <script>
   import { auth } from './firebase'; // Assuming you have the Firebase initialization in a file named firebase.js
   import { onMount } from 'svelte';
-  import PetProfileForm from './components/PetProfileForm.svelte';
-  import PetProfileManagement from './components/PetProfileManagement.svelte';
+  import PetProfileForm from './PetProfileForm.svelte';
+  import PetProfileManagement from './PetProfileManagement.svelte';
 
   let user = null;
 

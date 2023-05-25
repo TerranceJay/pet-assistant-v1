@@ -1,6 +1,7 @@
 <script>
-  
   import { getPetProfiles, deletePetProfile } from './petProfileService';
+  import { onMount } from 'svelte';
+
   let petProfiles = [];
 
   async function fetchPetProfiles() {
@@ -25,8 +26,9 @@
 
   // Fetch pet profiles when the component is mounted
   onMount(fetchPetProfiles);
-</script>
 
+  export { petProfiles };
+</script>
 
 <h1>Pet Profile Management</h1>
 
